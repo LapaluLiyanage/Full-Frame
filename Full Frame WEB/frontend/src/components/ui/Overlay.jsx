@@ -221,7 +221,7 @@ export default function Overlay() {
             <a href="https://github.com/LapaluLiyanage/Full-Frame" target="_blank" rel="noreferrer">GitHub Repo</a>
             <a href="https://chrome.google.com/webstore" target="_blank" rel="noreferrer">Chrome Web Store</a>
             <a href="https://full-frame.vercel.app/privacy.html">Privacy Policy</a>
-            <a href="https://github.com/LapaluLiyanage/Full-Frame/issues" target="_blank" rel="noreferrer">Report an issue</a>
+            <a href="mailto:lapaluliyanage@gmail.com?subject=Full%20Frame%20-%20Issue%20Report">Report an issue</a>
           </div>
           <p className="disclaimer mx-auto">
             Made by <a href="https://github.com/LapaluLiyanage" target="_blank" rel="noreferrer">Lapalu Liyanage</a>. Not affiliated with or endorsed by Meta/Facebook.
