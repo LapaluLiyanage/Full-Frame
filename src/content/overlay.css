@@ -1,0 +1,42 @@
+#fbadk-launch {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2147483000;
+
+  padding: 10px 16px;
+  border: 1px solid #1f4a3f;
+  border-radius: 8px;
+  background: #2f5d50;
+  color: #f4f6f4;
+
+  font: 600 13.5px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+  letter-spacing: 0.005em;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(12, 24, 20, 0.28);
+  transition: background-color 120ms ease, transform 120ms ease;
+}
+
+#fbadk-launch:hover:not(:disabled) {
+  background: #3a7263;
+}
+
+#fbadk-launch:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+#fbadk-launch:disabled {
+  background: #55625d;
+  cursor: default;
+}
+
+#fbadk-launch:focus-visible {
+  outline: 2px solid #f2c14e;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #fbadk-launch {
+    transition: none;
+  }
+}

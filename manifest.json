@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "Facebook Album Download Kit",
+  "version": "1.0.0",
+  "description": "Save your Facebook albums as full-resolution files or a ZIP. Nothing leaves your browser.",
+  "minimum_chrome_version": "116",
+
+  "permissions": [
+    "downloads",
+    "storage",
+    "scripting",
+    "sidePanel",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "https://*.facebook.com/*",
+    "https://*.fbcdn.net/*"
+  ],
+
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+
+  "action": {
+    "default_title": "Facebook Album Download Kit",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+
+  "side_panel": {
+    "default_path": "src/sidepanel/sidepanel.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*.facebook.com/*"],
+      "js": ["src/content/content.js"],
+      "css": ["src/content/overlay.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}

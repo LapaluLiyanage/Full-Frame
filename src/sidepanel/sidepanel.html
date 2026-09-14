@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Facebook Album Download Kit</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <h1 id="albumTitle">No album open</h1>
+      <p class="context" id="albumContext">
+        Open a Facebook album, then come back here.
+      </p>
+    </header>
+
+    <div class="notice" id="notice" hidden role="status"></div>
+
+    <section class="stage" id="stageScan">
+      <button class="primary" id="btnScan" type="button">Scan this album</button>
+      <p class="hint">
+        Scrolls the album to the end and collects every photo it finds. Leave
+        the tab visible while it runs.
+      </p>
+    </section>
+
+    <section class="stage" id="stageScanning" hidden>
+      <div class="counter">
+        <span class="counter-num" id="scanFound">0</span>
+        <span class="counter-label" id="scanLabel">photos found</span>
+      </div>
+      <div class="bar"><div class="bar-fill" id="scanBar"></div></div>
+      <button class="ghost" id="btnStopScan" type="button">Stop scanning</button>
+    </section>
+
+    <section class="sheet" id="stageResults" hidden>
+      <div class="sheet-head">
+        <p id="resultSummary" class="summary"></p>
+        <div class="selectors">
+          <button class="link" id="btnAll" type="button">Select all</button>
+          <button class="link" id="btnNone" type="button">Clear</button>
+          <button class="link" id="btnRescan" type="button">Scan again</button>
+        </div>
+      </div>
+      <ul class="grid" id="grid"></ul>
+    </section>
+
+    <details class="settings" id="settings">
+      <summary>Settings</summary>
+      <div class="settings-body">
+        <label class="field">
+          <span>Image quality</span>
+          <select id="setQuality">
+            <option value="original">
+              Original — opens each photo, slower
+            </option>
+            <option value="quick">Quick — uses grid images, faster</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Pause between photos</span>
+          <input
+            id="setDelay"
+            type="number"
+            min="0"
+            max="10000"
+            step="100"
+            inputmode="numeric"
+          />
+          <small>Milliseconds. Raise this if Facebook starts refusing requests.</small>
+        </label>
+
+        <label class="field">
+          <span>Downloads at a time</span>
+          <input id="setConcurrency" type="number" min="1" max="8" step="1" />
+        </label>
+
+        <button class="ghost" id="btnResetSettings" type="button">
+          Reset to defaults
+        </button>
+      </div>
+    </details>
+
+    <footer class="actionbar" id="actionbar" hidden>
+      <div class="progress" id="progress" hidden>
+        <div class="bar"><div class="bar-fill" id="jobBar"></div></div>
+        <p class="progress-text" id="jobText"></p>
+      </div>
+      <div class="buttons">
+        <button class="primary" id="btnFiles" type="button">Save as files</button>
+        <button class="secondary" id="btnZip" type="button">Save as ZIP</button>
+        <button class="danger" id="btnCancel" type="button" hidden>Cancel</button>
+      </div>
+      <button class="link retry" id="btnRetry" type="button" hidden>
+        Retry the failed ones
+      </button>
+    </footer>
+
+    <script src="zip.js"></script>
+    <script src="sidepanel.js"></script>
+  </body>
+</html>
