@@ -218,12 +218,14 @@ export default function Overlay() {
       <footer>
         <div className="container">
           <div className="footer-links">
-            <a href="https://github.com" target="_blank" rel="noreferrer">GitHub Repo</a>
+            <a href="https://github.com/LapaluLiyanage/Full-Frame" target="_blank" rel="noreferrer">GitHub Repo</a>
             <a href="https://chrome.google.com/webstore" target="_blank" rel="noreferrer">Chrome Web Store</a>
             <a href="https://full-frame.vercel.app/privacy.html">Privacy Policy</a>
-            <a href="#">Report an issue</a>
+            <a href="https://github.com/LapaluLiyanage/Full-Frame/issues" target="_blank" rel="noreferrer">Report an issue</a>
           </div>
-          <p className="disclaimer mx-auto">Not affiliated with or endorsed by Meta/Facebook.</p>
+          <p className="disclaimer mx-auto">
+            Made by <a href="https://github.com/LapaluLiyanage" target="_blank" rel="noreferrer">Lapalu Liyanage</a>. Not affiliated with or endorsed by Meta/Facebook.
+          </p>
         </div>
       </footer>
     </div>
