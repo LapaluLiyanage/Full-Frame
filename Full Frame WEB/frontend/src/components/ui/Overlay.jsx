@@ -220,7 +220,7 @@ export default function Overlay() {
           <div className="footer-links">
             <a href="https://github.com" target="_blank" rel="noreferrer">GitHub Repo</a>
             <a href="https://chrome.google.com/webstore" target="_blank" rel="noreferrer">Chrome Web Store</a>
-            <a href="#">Privacy Policy</a>
+            <a href="https://full-frame.vercel.app/privacy.html">Privacy Policy</a>
             <a href="#">Report an issue</a>
           </div>
           <p className="disclaimer mx-auto">Not affiliated with or endorsed by Meta/Facebook.</p>
