@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd \"Full Frame WEB/frontend\" && npm install && npm run build",
+  "outputDirectory": "Full Frame WEB/frontend/dist",
+  "installCommand": "echo skip-root-install",
+  "ignoreCommand": "bash -c '[ \"$VERCEL_GIT_COMMIT_REF\" = \"WEB\" ] && exit 1 || exit 0'"
+}
