@@ -6,6 +6,8 @@ import FAQ from './FAQ';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const EXTENSION_URL = 'https://chromewebstore.google.com/detail/facebook-album-download-k/pfpifcnmbhnhjpoflkejkeeoaaiifggf';
+
 export default function Overlay() {
   const overlayRef = useRef(null);
   const [theme, setTheme] = useState(() => {
@@ -74,10 +76,10 @@ export default function Overlay() {
               {theme === 'dark' ? <Sun size={19} /> : <Moon size={19} />}
             </button>
             <a 
-              href="https://chrome.google.com/webstore" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="btn" 
+              href={EXTENSION_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="btn"
               style={{ padding: '0.6rem 1.25rem', fontSize: '0.92rem' }}
             >
               Get Extension
@@ -93,7 +95,7 @@ export default function Overlay() {
           <p className="mx-auto mb-8">
             Save any Facebook album you can already view — as separate files or one ZIP. Free. No account, no server, no catch.
           </p>
-          <a href="https://chrome.google.com/webstore" target="_blank" rel="noreferrer" className="btn">
+          <a href={EXTENSION_URL} target="_blank" rel="noreferrer" className="btn">
             Add to Chrome — it's free
           </a>
           <span className="trust-line">Works in Chrome & Edge 116+ · No sign-up</span>
@@ -219,7 +221,7 @@ export default function Overlay() {
         <div className="container">
           <div className="footer-links">
             <a href="https://github.com/LapaluLiyanage/Full-Frame" target="_blank" rel="noreferrer">GitHub Repo</a>
-            <a href="https://chrome.google.com/webstore" target="_blank" rel="noreferrer">Chrome Web Store</a>
+            <a href={EXTENSION_URL} target="_blank" rel="noreferrer">Chrome Web Store</a>
             <a href="https://full-frame.vercel.app/privacy.html">Privacy Policy</a>
             <a href="mailto:lapaluliyanage@gmail.com?subject=Full%20Frame%20-%20Issue%20Report">Report an issue</a>
           </div>
