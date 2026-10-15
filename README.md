@@ -4,6 +4,8 @@ A Chrome/Edge extension (Manifest V3) for saving Facebook albums you can
 already view, either as individual files or as one ZIP. No account, no server,
 no paywall — the photos go straight from Facebook's CDN to your disk.
 
+![Full Frame promo](docs/marquee-promo-1400x560.png)
+
 ## Install
 
 1. `chrome://extensions` → turn on **Developer mode**
